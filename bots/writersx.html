@@ -1,0 +1,62 @@
+<!doctype html><html lang="en" class="dark-page"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>WriterSX • Tha Doll House</title>
+<link rel="stylesheet" href="/styles/style.css">
+<script defer src="/scripts/main.js"></script>
+</head><body class="dark-page">
+<nav class="nav"><div class="nav-inner container">
+  <div class="logo"><img src="/assets/cards/logo.png" onerror="this.style.display='none'"/><span>Tha Doll House</span></div>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/index.html#bots">Bots</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</div></nav>
+<div class="container">
+
+<section class="hero">
+  <div class="hero-card gold-border">
+    <div class="h1">WriterSX</div>
+    <div class="sub">Creates High-Quality Content</div>
+    <ul class="features"><li>Blog Post Generator</li>
+<li>Article Writer</li>
+<li>Storyteller</li>
+<li>Headline Crafter</li></ul>
+    <div class="pricing">
+      <span class="price">$39</span>
+      <button class="btn btn-gold" onclick="alert('Replace with your Stripe link for WriterSX.')">Buy Now</button>
+      <a class="btn btn-teal" href="/index.html#bots">Back</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <img src="/assets/cards/card_writerx.png" alt="WriterSX card" style="width:100%;border-radius:14px" onerror="this.style.display='none'">
+    <div id="demo" class="demo dark" data-mode="chat">
+      <div class="tabs">
+        <button class="btn btn-teal tab-chat">💬 Chat Mode</button>
+        <button class="btn btn-ghost tab-feature">📄 Feature Mode</button>
+        <select class="sample-select" style="margin-left:auto">
+          <option value="Outline">Outline</option><option value="Intro">Intro</option><option value="Titles">Titles</option>
+        </select>
+      </div>
+      <textarea placeholder="Type here to chat with WriterSX…"></textarea>
+      <div style="margin-top:8px;display:flex;gap:10px">
+        <button class="btn btn-gold run">Run</button>
+        <button class="btn btn-ghost" onclick="document.querySelector('#demo textarea').value=''">Clear</button>
+      </div>
+      <div class="output" style="margin-top:12px"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  initBotDemo({
+    root:'#demo',
+    welcome:'Hi, I\'m WriterSX! Try Chat or Feature Mode.',
+    samples:{"Outline": "Blog outline (H2/H3) for a topic.", "Intro": "100-word intro paragraph with hook.", "Titles": "5 SEO-friendly titles."},
+    reply:(q)=>`WriterSX response to: “${q}”.\n\n• Option A\n• Option B\n• Option C`
+  })
+})
+</script>
+</div><div class="footer">© Tha Doll House • All rights reserved.</div></body></html>
