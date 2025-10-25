@@ -1,0 +1,62 @@
+<!doctype html><html lang="en" class=""><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ChefGenie • Tha Doll House</title>
+<link rel="stylesheet" href="/styles/style.css">
+<script defer src="/scripts/main.js"></script>
+</head><body class="">
+<nav class="nav"><div class="nav-inner container">
+  <div class="logo"><img src="/assets/cards/logo.png" onerror="this.style.display='none'"/><span>Tha Doll House</span></div>
+  <div class="nav-links">
+    <a href="/index.html">Home</a>
+    <a href="/index.html#bots">Bots</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</div></nav>
+<div class="container">
+
+<section class="hero">
+  <div class="hero-card gold-border">
+    <div class="h1">ChefGenie</div>
+    <div class="sub">Turn Ingredients into Luxurious Dishes</div>
+    <ul class="features"><li>Recipe Generator</li>
+<li>Nutrition Analyzer</li>
+<li>Meal Planner</li>
+<li>Wine Pairing</li></ul>
+    <div class="pricing">
+      <span class="price">$39</span>
+      <button class="btn btn-gold" onclick="alert('Replace with your Stripe link for ChefGenie.')">Buy Now</button>
+      <a class="btn btn-teal" href="/index.html#bots">Back</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <img src="/assets/cards/card_chefgenie.png" alt="ChefGenie card" style="width:100%;border-radius:14px" onerror="this.style.display='none'">
+    <div id="demo" class="demo" data-mode="chat">
+      <div class="tabs">
+        <button class="btn btn-teal tab-chat">💬 Chat Mode</button>
+        <button class="btn btn-ghost tab-feature">📄 Feature Mode</button>
+        <select class="sample-select" style="margin-left:auto">
+          <option value="Recipe">Recipe</option><option value="Macros">Macros</option><option value="Shop">Shop</option>
+        </select>
+      </div>
+      <textarea placeholder="Type here to chat with ChefGenie…"></textarea>
+      <div style="margin-top:8px;display:flex;gap:10px">
+        <button class="btn btn-gold run">Run</button>
+        <button class="btn btn-ghost" onclick="document.querySelector('#demo textarea').value=''">Clear</button>
+      </div>
+      <div class="output" style="margin-top:12px"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  initBotDemo({
+    root:'#demo',
+    welcome:'Hi, I\'m ChefGenie! Try Chat or Feature Mode.',
+    samples:{"Recipe": "Recipe using chicken, rice, broccoli.", "Macros": "Approx. macros per serving.", "Shop": "Shopping list for 4 servings."},
+    reply:(q)=>`ChefGenie response to: “${q}”.\n\n• Option A\n• Option B\n• Option C`
+  })
+})
+</script>
+</div><div class="footer">© Tha Doll House • All rights reserved.</div></body></html>
